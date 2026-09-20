@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0b0d" />
+  <title>Send · @badbottombitch1</title>
+  <meta name="description" content="Tip, book custom content, or send money to @badbottombitch1 on X Money." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b0b0d;
+      --card: #15151a;
+      --card2: #1c1c23;
+      --line: #2a2a33;
+      --gold: #e8c36a;
+      --gold2: #f3d98a;
+      --pink: #ff4d7a;
+      --text: #f4f1ea;
+      --muted: #9a958c;
+      --ok: #5ee0a0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: var(--bg); color: var(--text); font-family: Inter, system-ui, sans-serif; }
+    body {
+      min-height: 100dvh;
+      background:
+        radial-gradient(1200px 500px at 50% -120px, rgba(232,195,106,.16), transparent 60%),
+        radial-gradient(800px 400px at 100% 100%, rgba(255,77,122,.08), transparent 50%),
+        var(--bg);
+    }
+    .wrap { max-width: 440px; margin: 0 auto; padding: 28px 18px 48px; }
+    .eyebrow { letter-spacing: .22em; text-transform: uppercase; font-size: 11px; color: var(--gold); font-weight: 600; }
+    h1 { font-family: "Bebas Neue", sans-serif; font-size: 52px; line-height: .9; margin: 8px 0 6px; }
+    h1 span { color: var(--gold); }
+    .sub { color: var(--muted); font-size: 14px; line-height: 1.5; margin-bottom: 22px; }
+    .handle {
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+      padding: 12px 14px; margin-bottom: 14px;
+    }
+    .handle strong { font-size: 16px; }
+    .handle small { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+    button, .btn {
+      appearance: none; border: 0; cursor: pointer; text-decoration: none;
+      font-family: inherit; font-weight: 600;
+    }
+    .ghost, .copy {
+      background: #2a2a33; color: var(--text); border-radius: 10px;
+      padding: 9px 12px; font-size: 13px; white-space: nowrap;
+    }
+    .primary {
+      display: block; width: 100%; text-align: center;
+      background: linear-gradient(180deg, var(--gold2), var(--gold));
+      color: #1a1406; border-radius: 14px; padding: 15px 16px; font-size: 16px;
+      box-shadow: 0 10px 30px rgba(232,195,106,.18);
+    }
+    .primary:active { transform: translateY(1px); }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0 22px; }
+    .secondary {
+      display: block; text-align: center; background: var(--card2); color: var(--text);
+      border: 1px solid var(--line); border-radius: 14px; padding: 13px 12px; font-size: 14px;
+    }
+    .section { margin: 8px 0 20px; }
+    .section h2 { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    .amts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .amt {
+      background: var(--card); border: 1px solid var(--line); color: var(--text);
+      border-radius: 12px; padding: 12px 0; font-size: 15px;
+    }
+    .amt.active { border-color: var(--gold); color: var(--gold); background: #221c10; }
+    .custom {
+      margin-top: 8px; display: flex; gap: 8px;
+    }
+    .custom input {
+      flex: 1; background: var(--card); border: 1px solid var(--line); color: var(--text);
+      border-radius: 12px; padding: 12px 14px; font-size: 16px; outline: none;
+    }
+    .custom input:focus { border-color: var(--gold); }
+    .offers { display: grid; gap: 10px; }
+    .offer {
+      background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+      padding: 14px; display: grid; grid-template-columns: 1fr auto; gap: 8px 12px; align-items: center;
+    }
+    .offer h3 { font-size: 15px; }
+    .offer p { grid-column: 1 / -1; color: var(--muted); font-size: 13px; line-height: 1.4; }
+    .price { color: var(--gold); font-weight: 700; font-size: 15px; }
+    .buy {
+      background: #2a2112; color: var(--gold); border: 1px solid #3d3318;
+      border-radius: 10px; padding: 8px 12px; font-size: 13px;
+    }
+    .steps { counter-reset: s; display: grid; gap: 8px; }
+    .step {
+      background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+      padding: 12px 12px 12px 44px; position: relative; color: #ddd; font-size: 13.5px; line-height: 1.45;
+    }
+    .step::before {
+      counter-increment: s; content: counter(s);
+      position: absolute; left: 12px; top: 12px;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: #2a2112; color: var(--gold); font-size: 12px; font-weight: 700;
+      display: grid; place-items: center;
+    }
+    .toast {
+      position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%) translateY(20px);
+      background: #123024; color: var(--ok); border: 1px solid #1e5a3c;
+      padding: 10px 14px; border-radius: 999px; font-size: 13px; font-weight: 600;
+      opacity: 0; pointer-events: none; transition: .25s ease;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .fine { color: #6f6a63; font-size: 11.5px; line-height: 1.5; margin-top: 18px; }
+    .fine a { color: #b9b3a8; }
+    .note {
+      background: #1a1410; border: 1px solid #3a2a16; color: #e8c36a;
+      border-radius: 12px; padding: 12px; font-size: 13px; line-height: 1.45; margin-bottom: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">X Money · Instant P2P</div>
+    <h1>SEND<br><span>MONEY</span></h1>
+    <p class="sub">Tip the feed, book custom content, or just throw something in the wallet. Paid on X Money to the handle below.</p>
+
+    <div class="handle">
+      <div>
+        <strong id="handleLabel">@badbottombitch1</strong>
+        <small>X Wallet · US P2P</small>
+      </div>
+      <button class="copy" type="button" id="copyHandle">Copy</button>
+    </div>
+
+    <a class="primary" id="openX" href="https://x.com/badbottombitch1" target="_blank" rel="noopener">Open X &amp; send</a>
+    <div class="row">
+      <a class="secondary" href="https://x.com/messages/compose?recipient_id=1196298262019559424" target="_blank" rel="noopener">DM to request</a>
+      <button class="secondary" type="button" id="copyPayLine">Copy pay line</button>
+    </div>
+
+    <div class="note">X Money does not give a public checkout URL. Sender opens the X app → Money tab → Send → paste <strong>@badbottombitch1</strong> → amount → confirm. US Premium wallets only.</div>
+
+    <div class="section">
+      <h2>Amount</h2>
+      <div class="amts" id="amts">
+        <button class="amt" data-amt="5">$5</button>
+        <button class="amt active" data-amt="15">$15</button>
+        <button class="amt" data-amt="25">$25</button>
+        <button class="amt" data-amt="50">$50</button>
+      </div>
+      <div class="custom">
+        <input id="customAmt" type="number" min="1" step="1" placeholder="Custom $" inputmode="numeric" />
+        <button class="copy" type="button" id="useCustom">Use</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Menu</h2>
+      <div class="offers">
+        <article class="offer">
+          <h3>Tip the feed</h3>
+          <span class="price">Any</span>
+          <p>No deliverable. Just support. Drop a note on the X Money send if you want.</p>
+          <button class="buy" type="button" data-offer="Tip" data-amt="">Select</button>
+        </article>
+        <article class="offer">
+          <h3>Custom photo set</h3>
+          <span class="price">$25</span>
+          <p>Request in DM after you send. Tell me the vibe. Delivery after payment clears.</p>
+          <button class="buy" type="button" data-offer="Custom photo set" data-amt="25">Select $25</button>
+        </article>
+        <article class="offer">
+          <h3>Custom video</h3>
+          <span class="price">$50</span>
+          <p>Short custom clip. Spell the request in DM. No meetups sold through this page.</p>
+          <button class="buy" type="button" data-offer="Custom video" data-amt="50">Select $50</button>
+        </article>
+        <article class="offer">
+          <h3>Collab / shoot hold</h3>
+          <span class="price">$100</span>
+          <p>Deposit to lock a collab or photoshoot conversation. Details stay in DM.</p>
+          <button class="buy" type="button" data-offer="Collab hold" data-amt="100">Select $100</button>
+        </article>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>How to pay</h2>
+      <div class="steps">
+        <div class="step">Copy the handle <strong>@badbottombitch1</strong> (button above).</div>
+        <div class="step">Open the X app → Money / Wallet tab → <strong>Send</strong>.</div>
+        <div class="step">Search that handle, enter the amount, add a note like “photo set”.</div>
+        <div class="step">Hit send. Then DM me the request so I know what you paid for.</div>
+      </div>
+    </div>
+
+    <p class="fine">
+      18+ only. Payment happens inside X Money, not on this page. X Money P2P is currently a US product for eligible Premium wallets.
+      Do not send card numbers or one-time codes in DMs.
+      This page does not process cards.
+      Profile: <a href="https://x.com/badbottombitch1">x.com/badbottombitch1</a>
+    </p>
+  </div>
+  <div class="toast" id="toast">Copied</div>
+  <script>
+    const HANDLE = "@badbottombitch1";
+    const PROFILE = "https://x.com/badbottombitch1";
+    let amount = 15;
+    let offer = "Tip";
+
+    const toast = document.getElementById("toast");
+    function flash(msg) {
+      toast.textContent = msg;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 1800);
+    }
+    function payLine() {
+      const n = amount ? `$${amount}` : "any amount";
+      return `Send ${n} on X Money to ${HANDLE}` + (offer && offer !== "Tip" ? ` for ${offer}` : "") + `. Then DM the request.`;
+    }
+    async function copy(text, msg) {
+      try {
+        await navigator.clipboard.writeText(text);
+        flash(msg || "Copied");
+      } catch {
+        flash("Copy failed — long-press the handle");
+      }
+    }
+    document.getElementById("copyHandle").onclick = () => copy(HANDLE, "Handle copied");
+    document.getElementById("copyPayLine").onclick = () => copy(payLine(), "Pay line copied");
+    document.getElementById("openX").addEventListener("click", () => {
+      copy(HANDLE, "Handle copied — paste it in Send");
+    });
+    document.querySelectorAll(".amt").forEach(btn => {
+      btn.onclick = () => {
+        document.querySelectorAll(".amt").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        amount = Number(btn.dataset.amt);
+        document.getElementById("customAmt").value = "";
+      };
+    });
+    document.getElementById("useCustom").onclick = () => {
+      const n = Number(document.getElementById("customAmt").value);
+      if (!n || n < 1) return flash("Enter a dollar amount");
+      amount = Math.round(n);
+      document.querySelectorAll(".amt").forEach(b => b.classList.remove("active"));
+      flash(`Set to $${amount}`);
+    };
+    document.querySelectorAll(".buy").forEach(btn => {
+      btn.onclick = () => {
+        offer = btn.dataset.offer || "Tip";
+        if (btn.dataset.amt) amount = Number(btn.dataset.amt);
+        copy(payLine(), `${offer} selected · line copied`);
+        window.open(PROFILE, "_blank", "noopener");
+      };
+    });
+  </script>
+</body>
+</html>
